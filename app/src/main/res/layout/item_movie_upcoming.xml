@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/dp_5"
+    android:layout_width="120dp"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageMovie"
+        android:layout_width="0dp"
+        android:adjustViewBounds="true"
+        android:layout_height="@dimen/dp_150"
+        app:cornerFamily="rounded"
+        android:background="@null"
+        android:scaleType="centerCrop"
+        app:strokeColor="@android:color/darker_gray"
+        app:strokeWidth="@dimen/dp_1"
+        app:shapeAppearanceOverlay="@style/RoundedCorner"
+        android:backgroundTint="@android:color/white"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView"
+        style="@style/TextTitleOneLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageMovie" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_text_genre"
+        android:padding="@dimen/dp_4"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/dp_3"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintStart_toStartOf="@+id/imageMovie"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_12"
+        android:gravity="center"
+        app:drawableStartCompat="@drawable/ic_star"
+        app:drawableTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/textGenre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textGenre" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/color_shank_500"
+        app:cornerFamily="rounded"
+        android:scaleType="centerCrop"
+        app:strokeColor="@android:color/darker_gray"
+        app:strokeWidth="@dimen/dp_1"
+        app:shapeAppearanceOverlay="@style/SpecificCutCorner"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_upcoming_soon"
+        tools:ignore="MissingConstraints,VectorDrawableCompat" />
+</androidx.constraintlayout.widget.ConstraintLayout>
