@@ -8,7 +8,7 @@
         android:layout_height="match_parent">
 
         <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/app_layout_home"
+            android:id="@+id/appBar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +27,7 @@
                     android:src="@drawable/ic_title" />
 
                 <androidx.appcompat.widget.AppCompatImageButton
-                    android:id="@+id/button_search"
+                    android:id="@+id/buttonViewSearch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
@@ -44,28 +44,28 @@
                     android:layout_height="match_parent">
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/textPopular"
+                        android:id="@+id/textViewPopular"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/home_popular"
-                        app:drawableStartCompat="@drawable/ic_local_movies"
+                        app:drawableStartCompat="@drawable/ic_local_movie"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/textSeeAllPopular"
+                        android:id="@+id/textViewSeeAllPopular"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/home_see_all"
                         android:textColor="@color/color_grandis"
-                        app:layout_constraintBottom_toBottomOf="@+id/textPopular"
+                        app:layout_constraintBottom_toBottomOf="@+id/textViewPopular"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:ignore="MissingConstraints" />
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recyclerPopular"
+                        android:id="@+id/recyclerViewPopular"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_marginTop="@dimen/dp_5"
@@ -73,31 +73,31 @@
                         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textPopular" />
+                        app:layout_constraintTop_toBottomOf="@+id/textViewPopular" />
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/textUpcomming"
+                        android:id="@+id/textViewUpcomming"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/dp_8"
                         android:gravity="center"
                         android:text="@string/home_upcoming"
-                        app:drawableStartCompat="@drawable/ic_local_movies"
+                        app:drawableStartCompat="@drawable/ic_local_movie"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/recyclerPopular" />
+                        app:layout_constraintTop_toBottomOf="@+id/recyclerViewPopular" />
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/textSeeAllUpcomming"
+                        android:id="@+id/textViewSeeAllUpcomming"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/home_see_all"
                         android:textColor="@color/color_grandis"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/textUpcomming"
+                        app:layout_constraintTop_toTopOf="@+id/textViewUpcomming"
                         tools:ignore="MissingConstraints" />
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recyclerUpcomming"
+                        android:id="@+id/recyclerViewUpcomming"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_marginTop="@dimen/dp_5"
@@ -105,33 +105,33 @@
                         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textSeeAllUpcomming" />
+                        app:layout_constraintTop_toBottomOf="@+id/textViewSeeAllUpcomming" />
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/textTopMovie"
+                        android:id="@+id/textViewTopMovie"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/home_top_rate"
                         android:layout_marginTop="@dimen/dp_8"
-                        app:drawableStartCompat="@drawable/ic_local_movies"
+                        android:text="@string/home_top_rate"
+                        app:drawableStartCompat="@drawable/ic_local_movie"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/recyclerUpcomming" />
+                        app:layout_constraintTop_toBottomOf="@+id/recyclerViewUpcomming" />
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/textSeeAllTopMovie"
+                        android:id="@+id/textViewSeeAllTopMovie"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_8"
                         android:gravity="center"
                         android:text="@string/home_see_all"
-                        android:layout_marginTop="@dimen/dp_8"
                         android:textColor="@color/color_grandis"
-                        app:layout_constraintBottom_toBottomOf="@+id/textTopMovie"
+                        app:layout_constraintBottom_toBottomOf="@+id/textViewTopMovie"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/textTopMovie"
+                        app:layout_constraintTop_toTopOf="@+id/textViewTopMovie"
                         tools:ignore="MissingConstraints" />
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recyclerTopMovie"
+                        android:id="@+id/recyclerViewTopMovie"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_marginTop="@dimen/dp_5"
@@ -139,7 +139,7 @@
                         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textSeeAllTopMovie" />
+                        app:layout_constraintTop_toBottomOf="@+id/textViewSeeAllTopMovie" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.core.widget.NestedScrollView>
         </com.google.android.material.appbar.AppBarLayout>

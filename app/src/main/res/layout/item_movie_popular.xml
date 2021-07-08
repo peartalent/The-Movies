@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="120dp"
+        android:layout_width="@dimen/dp_120"
         android:layout_height="wrap_content"
         android:padding="@dimen/dp_5">
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/imageMovie"
+            android:id="@+id/imageViewMovie"
             android:layout_width="0dp"
             android:layout_height="@dimen/dp_150"
             android:adjustViewBounds="true"
@@ -23,17 +23,17 @@
             tools:ignore="MissingConstraints" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/appCompatTextView"
+            android:id="@+id/textViewTitle"
             style="@style/TextTitleOneLine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageMovie" />
+            app:layout_constraintTop_toBottomOf="@+id/imageViewMovie" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textGenre"
+            android:id="@+id/textViewGenre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_3"
@@ -41,19 +41,19 @@
             android:padding="@dimen/dp_4"
             android:textColor="@color/white"
             android:textSize="@dimen/sp_12"
-            app:layout_constraintStart_toStartOf="@+id/imageMovie"
-            app:layout_constraintTop_toBottomOf="@+id/appCompatTextView" />
+            app:layout_constraintStart_toStartOf="@+id/imageViewMovie"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textRate"
+            android:id="@+id/textViewRate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="@dimen/sp_12"
             app:drawableStartCompat="@drawable/ic_star"
             app:drawableTint="@color/white"
-            app:layout_constraintBottom_toBottomOf="@+id/textGenre"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewGenre"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textGenre" />
+            app:layout_constraintTop_toTopOf="@+id/textViewGenre" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

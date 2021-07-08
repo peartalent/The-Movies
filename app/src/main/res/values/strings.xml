@@ -7,11 +7,13 @@
     <string name="home_upcoming">Upcoming</string>
     <string name="home_top_rate">Top Rate</string>
     <string name="home_see_all">See all</string>
-    <string name="detail_a_movie_of">A movie Of: <font fgcolor="#E3665D">%1$s</font></string>
 
+    <string name="detail_a_movie_of">A movie Of: <font fgcolor="#E3665D">%1$s</font></string>
     <string name="detail_actor">Actors</string>
     <string name="detail_recommend">Recommend</string>
     <string name="detail_minutes">minutes</string>
+
+    <string name="toast_error_internet">Error !! Internet is not connecting</string>
 
     <string name="demo_lorem">Alibaba và 40 tên cướp Alibaba và 40 tên cướp Alibaba và 40 tên cướp Alibaba và 40 tên cướp</string>
 </resources>

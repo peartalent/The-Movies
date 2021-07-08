@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_marginRight="@dimen/dp_5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp_5"
         android:orientation="vertical">
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/imageAvatarActor"
+            android:id="@+id/imageViewAvatarActor"
             android:layout_width="@dimen/dp_80"
             android:layout_height="@dimen/dp_120"
             android:adjustViewBounds="true"
@@ -22,10 +22,10 @@
             app:strokeWidth="@dimen/dp_1" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textNameActor"
+            android:id="@+id/textViewNameActor"
+            style="@style/TextTitleOneLine"
             android:layout_width="@dimen/dp_80"
-            android:layout_height="wrap_content"
-            style="@style/TextTitleOneLine"/>
+            android:layout_height="wrap_content" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </layout>
