@@ -99,6 +99,12 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.71828'
 
     //paging
-    def pagingVersion = "3.0.0"
-    implementation "androidx.paging:paging-runtime-ktx:$pagingVersion"
+    def paging_version = "3.0.0"
+    implementation "androidx.paging:paging-runtime-ktx:$paging_version"
+
+    // Room
+    def room_version = "2.3.0"
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
 }
