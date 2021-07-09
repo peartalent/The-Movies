@@ -56,7 +56,7 @@ abstract class BaseBindingActivity<T : ViewDataBinding?, V : ViewModel?> :
         mReceiver = object : BroadcastReceiver() {
             override fun onReceive(context: Context?, intent: Intent) {
                 val cm =
-                    context!!.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+                    context?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
                 val networkInfo = cm.activeNetworkInfo
                 if (!(networkInfo != null && networkInfo.isConnected)) {
                     showToast(resources.getString(R.string.toast_error_internet))

@@ -16,7 +16,7 @@ import dagger.android.support.DaggerFragment
 import java.lang.IllegalStateException
 import javax.inject.Inject
 
-abstract class BaseBindingAdapter<T : ViewDataBinding?, V : ViewModel?> : DaggerFragment() {
+abstract class BaseBindingFragment<T : ViewDataBinding?, V : ViewModel?> : DaggerFragment() {
     @LayoutRes
     abstract fun getLayoutResId(): Int
 

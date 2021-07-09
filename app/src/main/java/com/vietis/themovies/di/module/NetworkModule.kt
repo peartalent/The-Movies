@@ -14,24 +14,24 @@ import javax.inject.Singleton
 @Module
 class NetworkModule {
 
-//    @Singleton
-//    @Provides
-//    fun provideHttpClient(): OkHttpClient {
-//        val okHttpClientBuilder = OkHttpClient.Builder()
-//        okHttpClientBuilder.addInterceptor { chain ->
-//            val original = chain.request()
-//            val originalHttpUrl = original.url()
-//            val url = originalHttpUrl.newBuilder()
-//                .addQueryParameter(ApiConfig.API_KEY, BuildConfig.API_KEY)
-//                .build()
-//            val requestBuilder: Request.Builder = original.newBuilder()
-//                .url(url)
-//
-//            val request: Request = requestBuilder.build()
-//            chain.proceed(request)
-//        }
-//        return okHttpClientBuilder.build()
-//    }
+    @Singleton
+    @Provides
+    fun provideHttpClient(): OkHttpClient {
+        val okHttpClientBuilder = OkHttpClient.Builder()
+        okHttpClientBuilder.addInterceptor { chain ->
+            val original = chain.request()
+            val originalHttpUrl = original.url()
+            val url = originalHttpUrl.newBuilder()
+                .addQueryParameter(ApiConfig.API_KEY, BuildConfig.API_KEY)
+                .build()
+            val requestBuilder: Request.Builder = original.newBuilder()
+                .url(url)
+
+            val request: Request = requestBuilder.build()
+            chain.proceed(request)
+        }
+        return okHttpClientBuilder.build()
+    }
 
     @Singleton
     @Provides
