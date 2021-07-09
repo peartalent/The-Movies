@@ -1,4 +1,4 @@
-package com.sun.homecinema.base
+package com.vietis.themovies.base.adapter
 
 import androidx.recyclerview.widget.DiffUtil
 import com.vietis.themovies.data.DiffEntity
