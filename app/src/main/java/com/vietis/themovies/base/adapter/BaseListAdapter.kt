@@ -5,7 +5,7 @@ import androidx.viewbinding.ViewBinding
 import com.vietis.themovies.base.viewholder.BaseViewHolder
 import com.vietis.themovies.data.DiffEntity
 
-abstract class BaseAdapter<T : DiffEntity, B : ViewBinding> :
+abstract class BaseListAdapter<T : DiffEntity, B : ViewBinding> :
     ListAdapter<T, BaseViewHolder<T, B>>(BaseDiffUtil<T>()),
     BindableAdapter<List<T>> {
 
